@@ -1,6 +1,5 @@
 package com.gobus.system.controller;
 
-import com.gobus.system.dto.BusDTO;
 import com.gobus.system.model.Bus;
 import com.gobus.system.service.BusService;
 import com.gobus.system.util.ObjectMapperUtils;
@@ -23,14 +22,14 @@ public class BusRestController {
     private BusService busService;
 
     @GetMapping(value = "/")
-    public List<BusDTO> getAllBus() {
-        return ObjectMapperUtils.mapAll(busService.findAll(), BusDTO.class);
+    public List<Bus> getAllBus() {
+        return ObjectMapperUtils.mapAll(busService.findAll(), Bus.class);
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
 	@PostMapping(value = "/save")
-    public ResponseEntity<?> saveOrUpdateBus(@RequestBody BusDTO busDTO) {
-    	busService.saveOrUpdateBus(ObjectMapperUtils.map(busDTO, Bus.class));
+    public ResponseEntity<?> saveOrUpdateBus(@RequestBody Bus bus) {
+    	busService.saveOrUpdateBus(ObjectMapperUtils.map(bus, Bus.class));
         return new ResponseEntity("Bus added successfully", HttpStatus.OK);
     }
 
