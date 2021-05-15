@@ -1,6 +1,4 @@
-use BusReservationDev
-//bus collection
-db.createCollection("bus")
+//Adding sample data in Buses collection
 db.bus.insert({
     seatCapacity: 100,
      type: "Sleeper",
@@ -12,8 +10,8 @@ db.bus.insert({
      seatCharges: 300.05,
      placesofHalt: 4
 })
-//user collection
-db.createCollection("user")
+
+//Adding sample data in owners collection
 db.user.insert({
      name: "Bill Franklin",
      busName: "Gotcha Travels",
