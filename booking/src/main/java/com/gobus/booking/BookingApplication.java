@@ -1,16 +1,18 @@
 package com.gobus.booking;
 
-import java.util.Optional;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import com.gobus.data.Bus;
 import com.gobus.repository.BusRepository;
 
 @SpringBootApplication
+@ComponentScan("com.gobus") //to scan packages mentioned
+@EnableMongoRepositories("com.gobus") //to activate MongoDB repositories
 public class BookingApplication {
 
 	public static void main(String[] args) {
