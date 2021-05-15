@@ -1,0 +1,13 @@
+{
+    "seatCapacity": 10,
+    "type": "sleeper",
+    "number": "PY-01",
+    "driverNum": 12345566,
+    "scrDest": [
+      "Pondy",
+      "Coonoor"
+    ],
+    "seatCharges": 300.12,
+    "currentReservationType": 1,
+    "placesofHalt": 4
+  }
